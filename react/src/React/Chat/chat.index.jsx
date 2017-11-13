@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
-// import TradeFilter from './trade.filter.jsx';
+import CommentList from './comment.list.jsx';
 
 class ChatIndex extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class ChatIndex extends Component {
     fetchComments() {
         this.setState({loading: true});
 
-        let url = 'https://apps.orbitremit.dev/cakeback/comments.json';
+        let url = '/reactfront/comments.json';
 
         fetch(url, {
             credentials: 'include',
@@ -40,7 +41,7 @@ class ChatIndex extends Component {
                 this.setState({
                     loading: false,
                     comments: response.comments,
-                });
+                });console.log(this.state.comments);
             }.bind(this))
             .catch(function(error) {
                 this.setState({
@@ -52,10 +53,10 @@ class ChatIndex extends Component {
     }
     render() {
         return (
-            <div className="ChatIndex">
+            <div className="chatIndex">
                 <h1>Comments</h1>
-                {/* <CommentList data={this.state.comments} />
-                <CommentForm onCommentSubmit={this.handleCommentSubmit} /> */}
+                <CommentList data={this.state.comments} />
+                {/* <CommentForm onCommentSubmit={this.handleCommentSubmit} /> */}
             </div>
         );
     }

@@ -8,7 +8,7 @@ var config = {
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'myown.js'
+    filename: 'reactbundle.js'
   },
   module : {
     loaders : [

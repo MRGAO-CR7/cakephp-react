@@ -26,8 +26,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!-- Latest compiled and minified CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -35,11 +36,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
+    <?= $this->fetch('content') ?>
+
     <footer>
-        <?= $this->Html->script('myown.js') ?>
+        <?= $this->Html->script('reactbundle.js') ?>
     </footer>
 </body>
 </html>

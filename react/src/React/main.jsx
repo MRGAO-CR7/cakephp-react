@@ -19,7 +19,7 @@ class Main extends Component {
                                 <NavLink exact to="/" activeClassName="active">Index</NavLink>
                             </li>
                             <li className="">
-                                <NavLink exact to="/" activeClassName="active">Summary</NavLink>
+                                <NavLink to="/" activeClassName="active">Summary</NavLink>
                             </li>
                         </ul>
                     </div>
